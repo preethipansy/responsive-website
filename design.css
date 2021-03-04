@@ -1,0 +1,214 @@
+body {
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  font-family: "Anton", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none !important;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn-1 {
+  background-color: black;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-family: "Lobster", cursive;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.btn-1:focus {
+  -webkit-box-shadow: #7fff00;
+          box-shadow: #7fff00;
+}
+
+.btn-1:hover {
+  color: black;
+  background-color: white;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.navbar-toggler {
+  background-color: black;
+  width: 40px;
+  height: 30px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar {
+  background-color: #7f00ff;
+  padding: 20px 0;
+}
+
+.navbar .container {
+  padding: 15px 0;
+}
+
+.navbar .navbar-brand {
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.navbar .nav-item {
+  margin-left: 40px;
+}
+
+.navbar .nav-item .nav-link {
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 5px 0;
+  font-family: "Dancing Script", cursive;
+  position: relative;
+}
+
+.navbar .nav-item .nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  right: 0;
+  background-color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.home {
+  min-height: 100vh;
+  padding: 50px 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7f00ff), to(black));
+  background-image: linear-gradient(#7f00ff, black);
+}
+
+.home-text h1 {
+  font-size: 45px;
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  color: white;
+}
+
+.home-text p {
+  font-family: "Lobster", cursive;
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0;
+  font-weight: 100px;
+}
+
+.home-img svg {
+  margin-bottom: 200px;
+  margin-left: 15px;
+  max-width: 450px;
+  -webkit-animation: bounce 3s ease infinite;
+          animation: bounce 3s ease infinite;
+}
+
+.home-img {
+  position: relative;
+}
+
+.home-img .circle {
+  position: absolute;
+  z-index: 1;
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 50%;
+  top: 12%;
+  left: 10px;
+}
+
+.home-img .circle::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  opacity: 0.2;
+  border-radius: 50px;
+  left: 40px;
+  -webkit-transform-origin: 170px 170px;
+          transform-origin: 170px 170px;
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite;
+}
+/*# sourceMappingURL=design.css.map */

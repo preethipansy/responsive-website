@@ -1,0 +1,183 @@
+// choosen item
+$backcolor:#7f00ff;
+$mainheadingcolor:black;
+$paracolor:grey;
+$highlight:#7fff00;
+
+$font1: 'Anton', sans-serif;
+$font2: 'Dancing Script', cursive;
+$font3: 'Lobster', cursive;
+
+// global css
+
+body{
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+    font-family: $font1;
+    line-height: 1.5;
+//     background-color:$backcolor ;
+
+ }
+*{
+    margin:0px;
+    padding:0px;
+    outline: none !important;
+
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+
+}
+ul{
+    list-style: none;
+
+}
+.btn-1{
+    background-color: $mainheadingcolor;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-family: $font3;
+    transition: all 0.5s ease;
+}
+.btn-1:focus{
+    box-shadow: $highlight;
+
+}
+.btn-1:hover{
+    color: black;
+    background-color: white;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes bounce{
+    0%, 100%{
+        transform:translateY(-50px);
+    }
+    50%{
+        transform:translateY(0px);
+    }
+}
+// nav bar
+.navbar-toggler{
+    background-color: black;
+    width:40px;
+    height: 30px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    background-color: $backcolor;
+    padding: 20px 0;
+
+}
+.navbar .container{
+    padding:15px 0;
+
+}
+.navbar .navbar-brand{
+    font-size: 30px;
+    color:white;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.navbar .nav-item{
+margin-left: 40px;
+}
+.navbar .nav-item .nav-link{
+color: white;
+font-size: 20px;
+text-transform: capitalize;
+padding: 5px 0;
+font-family: $font2;
+position: relative;
+
+}
+.navbar .nav-item .nav-link::before{
+    
+content: '';
+position: absolute;
+left: 0;
+bottom: 0;
+height: 1px;
+right: 0;
+background-color: #ffffff;
+transition: all 0.5s ease;
+transform: scale(0);
+}
+.navbar .nav-item .nav-link.active::before,
+.navbar .nav-item .nav-link:hover:before{
+    transform: scale(1);
+}
+
+
+// home section
+.home{
+    min-height: 100vh;
+    padding: 50px 0;
+    background-image: linear-gradient($backcolor, black);
+}
+.home-text h1{
+    font-size: 45px;
+    font-family: $font2;
+    font-weight: 700;
+    color: white;
+}
+.home-text p{
+    font-family: $font3;
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+   margin: 0;
+   font-weight: 100px;
+}
+.home-img svg{
+    margin-bottom: 200px;
+    margin-left: 15px;
+    max-width: 450px;
+    animation: bounce 3s ease infinite;
+}
+
+.home-img{
+    position: relative;
+}
+.home-img .circle{
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 50%;
+    top:12%;
+    left:10px;
+}
+.home-img .circle::before{
+    content: '';
+    position: absolute;
+    width:60px;
+    height:60px;
+    background-color: white;
+    opacity: 0.2;
+    border-radius: 50px;
+    left: 40px;
+    transform-origin: 170px 170px;
+    animation: spin 10s linear infinite;
+}
+.video-play{
+    
+}
+
+
+
+//home section end
